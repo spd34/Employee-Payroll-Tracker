@@ -1,9 +1,11 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
-
-addEventListener('click',function(){
-  let AddEmployeeFirstName = prompt('First Name:')
+addEmployeesBtn.addEventListener('click', function() {
+  const getFirst = prompt ('Enter First Name')
+  const getLast = prompt ('Enter Last Name')
+  const getSalary = prompt ('Enter Salary')
 })
+
 
 // Collect employee data
 const collectEmployees = function() {
@@ -19,6 +21,7 @@ const displayAverageSalary = function(employeesArray) {
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
 }
+
 
 /*
   ====================
@@ -85,3 +88,4 @@ const trackEmployeeData = function() {
 
 // Add event listener to 'Add Employees' button
 addEmployeesBtn.addEventListener('click', trackEmployeeData);
+

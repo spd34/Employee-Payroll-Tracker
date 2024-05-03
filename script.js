@@ -1,25 +1,58 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
-addEmployeesBtn.addEventListener('click', function() {
-  const getFirst = prompt ('Enter First Name')
-  const getLast = prompt ('Enter Last Name')
-  const getSalary = prompt ('Enter Salary')
-})
 
 
 // Collect employee data
 const collectEmployees = function() {
-  // TODO: Get user input to create and return an array of employee objects
+  const employeesArray = []
+  let grimbus = true;
+  while (grimbus){
+    const getFirst = prompt ('Enter First Name')
+    const getLast = prompt ('Enter Last Name')
+    let getSalary = prompt ('Enter Salary')
+  
+    if (isNaN (getSalary)){
+      getSalary = 0
+    }
+    const employee = {
+      firstName : getFirst,
+      lastName : getLast,
+      salary : parseFloat(getSalary),
+    }
+    employeesArray.push(employee)
+    grimbus = confirm('Do you want to add another employee?')
+  }
+  return employeesArray
 }
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
-  // TODO: Calculate and display the average salary
+const salArray = []
+for (let i = 0; i < employeesArray.length; i++) {
+  const grimbus = employeesArray[i].salary;
+  salArray.push(grimbus)
 }
+let sum = 0
+for(let i = 0; i < salArray.length; i++) {
+  sum += salArray[i];
+}
+const avg = sum / salArray.length
+console.log (`The average Employee salary is: ${avg}`)
+return avg;
+}
+  // TODO: Calculate and display the average salary
+  // get the total salary, declare the variable to 0 - make that variable a 'let'
+  // use variable number of employee using employeeArray.length - make it a const
+  // use for loop to over in employeesarray to calculate total salary
+  // outside the fourloop calculate the average salary
+
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
+  // https://www.programiz.com/javascript/examples/get-random-item
+  // https://www.geeksforgeeks.org/how-to-select-a-random-element-from-array-in-javascript/
+  // https://www.w3schools.com/js/js_random.asp
 }
 
 

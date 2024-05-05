@@ -5,8 +5,8 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 // Collect employee data
 const collectEmployees = function() {
   const employeesArray = []
-  let grimbus = true;
-  while (grimbus){
+  let pikachu = true;
+  while (pikachu){
     const getFirst = prompt ('Enter First Name')
     const getLast = prompt ('Enter Last Name')
     let getSalary = prompt ('Enter Salary')
@@ -20,7 +20,7 @@ const collectEmployees = function() {
       salary : parseFloat(getSalary),
     }
     employeesArray.push(employee)
-    grimbus = confirm('Do you want to add another employee?')
+    pikachu = confirm('Do you want to add another employee?')
   }
   return employeesArray
 }
@@ -29,8 +29,8 @@ const collectEmployees = function() {
 const displayAverageSalary = function(employeesArray) {
 const salArray = []
 for (let i = 0; i < employeesArray.length; i++) {
-  const grimbus = employeesArray[i].salary;
-  salArray.push(grimbus)
+  const pikachu = employeesArray[i].salary;
+  salArray.push(pikachu)
 }
 let sum = 0
 for(let i = 0; i < salArray.length; i++) {
@@ -49,11 +49,12 @@ return avg;
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
+}
   // TODO: Select and display a random employee
   // https://www.programiz.com/javascript/examples/get-random-item
   // https://www.geeksforgeeks.org/how-to-select-a-random-element-from-array-in-javascript/
   // https://www.w3schools.com/js/js_random.asp
-}
+
 
 
 /*

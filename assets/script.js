@@ -48,8 +48,19 @@ return avg;
 
 
 // Select a random employee
-const getRandomEmployee = function(employeesArray) {
-}
+const getRandomEmployee = function (employeesArray) {
+  if (employeesArray && employeesArray.length > 0) {
+    let winner =
+      employeesArray[Math.floor(Math.random() * employeesArray.length)];
+    console.log(
+      `Congratulations to ${winner.firstName} ${winner.lastName}, our random drawing winner`
+    );
+  } else {
+    console.log(
+      "Sorry, no winner today because you messed up and didn't enter any employees in the drawing"
+    );
+  }
+};
   // TODO: Select and display a random employee
   // https://www.programiz.com/javascript/examples/get-random-item
   // https://www.geeksforgeeks.org/how-to-select-a-random-element-from-array-in-javascript/
